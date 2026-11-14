@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="24" y1="16" x2="232" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="50%" stop-color="#155EEF" />
+      <stop offset="100%" stop-color="#4338CA" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="64" y1="56" x2="196" y2="196" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.06" />
+    </linearGradient>
+    <linearGradient id="sparkGrad" x1="128" y1="96" x2="128" y2="144" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#DBEAFE" />
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded chat-bubble badge -->
+  <path
+    d="M64 14 H192 C220.719 14 242 35.281 242 64 V178 C242 206.719 220.719 228 192 228 H84 L38 242 C30 244.5 23 238 26 230 L36 202 C22.5 193 14 177.5 14 160 V64 C14 35.281 35.281 14 64 14 Z"
+    fill="url(#bgGrad)"
+  />
+  <!-- Subtle inner border highlight -->
+  <path
+    d="M64 17 H192 C219.062 17 239 36.938 239 64 V178 C239 205.062 219.062 225 192 225 H83.4 L39.2 238.5 C34.5 240 29.8 236 31.5 231.2 L41.2 203.8 L42.4 200.4 L39.4 198.4 C25.6 189.2 17 173.8 17 157 V64 C17 36.938 36.938 17 64 17 Z"
+    stroke="url(#glowGrad)"
+    stroke-width="3"
+  />
+
+  <!-- Symmetric smart-home roof -->
+  <path
+    d="M64 114 L128 58 L192 114"
+    stroke="#FFFFFF"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- Symmetric D-shaped home body -->
+  <path
+    d="M84 102 V166 C84 173.732 90.268 180 98 180 H134 C161.614 180 180 160.614 180 134 C180 120 175.5 109.5 168 101"
+    stroke="#FFFFFF"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- 4-point AI spark inside -->
+  <path
+    d="M128 96 C130.5 113 135 117.5 152 120 C135 122.5 130.5 127 128 144 C125.5 127 121 122.5 104 120 C121 117.5 125.5 113 128 96 Z"
+    fill="url(#sparkGrad)"
+  />
+
+  <!-- Voice / conversation cadence dots -->
+  <circle cx="110" cy="156" r="5.5" fill="#BFDBFE" />
+  <circle cx="128" cy="156" r="5.5" fill="#FFFFFF" />
+  <circle cx="146" cy="156" r="5.5" fill="#BFDBFE" />
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" width="420" height="160" fill="none">
+  <defs>
+    <linearGradient id="logoBgGrad" x1="18" y1="14" x2="142" y2="146" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="50%" stop-color="#155EEF" />
+      <stop offset="100%" stop-color="#4338CA" />
+    </linearGradient>
+    <linearGradient id="logoGlowGrad" x1="36" y1="24" x2="132" y2="132" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.06" />
+    </linearGradient>
+    <linearGradient id="logoTextGrad" x1="168" y1="22" x2="318" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="55%" stop-color="#155EEF" />
+      <stop offset="100%" stop-color="#4338CA" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left icon mark -->
+  <g transform="translate(8, 8) scale(0.5625)">
+    <path
+      d="M64 14 H192 C220.719 14 242 35.281 242 64 V178 C242 206.719 220.719 228 192 228 H84 L38 242 C30 244.5 23 238 26 230 L36 202 C22.5 193 14 177.5 14 160 V64 C14 35.281 35.281 14 64 14 Z"
+      fill="url(#logoBgGrad)"
+    />
+    <path
+      d="M64 17 H192 C219.062 17 239 36.938 239 64 V178 C239 205.062 219.062 225 192 225 H83.4 L39.2 238.5 C34.5 240 29.8 236 31.5 231.2 L41.2 203.8 L42.4 200.4 L39.4 198.4 C25.6 189.2 17 173.8 17 157 V64 C17 36.938 36.938 17 64 17 Z"
+      stroke="url(#logoGlowGrad)"
+      stroke-width="3"
+    />
+    <path
+      d="M64 114 L128 58 L192 114"
+      stroke="#FFFFFF"
+      stroke-width="14"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M84 102 V166 C84 173.732 90.268 180 98 180 H134 C161.614 180 180 160.614 180 134 C180 120 175.5 109.5 168 101"
+      stroke="#FFFFFF"
+      stroke-width="14"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M128 96 C130.5 113 135 117.5 152 120 C135 122.5 130.5 127 128 144 C125.5 127 121 122.5 104 120 C121 117.5 125.5 113 128 96 Z"
+      fill="#FFFFFF"
+    />
+    <circle cx="110" cy="156" r="5.5" fill="#BFDBFE" />
+    <circle cx="128" cy="156" r="5.5" fill="#FFFFFF" />
+    <circle cx="146" cy="156" r="5.5" fill="#BFDBFE" />
+  </g>
+
+  <!-- Wordmark -->
+  <text
+    x="168"
+    y="82"
+    fill="url(#logoTextGrad)"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Arial, sans-serif"
+    font-size="64"
+    font-weight="800"
+    letter-spacing="-1.5"
+  >Dify</text>
+
+  <!-- Accent spark -->
+  <path
+    d="M310 30 C311.4 38 313.8 40.4 322 41.8 C313.8 43.2 311.4 45.6 310 54 C308.6 45.6 306.2 43.2 298 41.8 C306.2 40.4 308.6 38 310 30 Z"
+    fill="#0EA5E9"
+  />
+
+  <text
+    x="170"
+    y="128"
+    fill="#64748B"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Arial, sans-serif"
+    font-size="34"
+    font-weight="600"
+    letter-spacing="0.4"
+  >Conversation</text>
+</svg>
