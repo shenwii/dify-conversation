@@ -1,0 +1,69 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "配置 Dify Conversation",
+        "description": "将 Dify 的聊天助手、Agent 或 Chatflow 应用接入 Home Assistant Assist。",
+        "data": {
+          "name": "名称（可选）",
+          "base_url": "API 基础 URL",
+          "api_key": "API Key",
+          "verify_ssl": "验证 SSL 证书",
+          "timeout": "请求超时时间",
+          "response_mode": "响应模式",
+          "clean_response": "清理 <think> 标签与 Markdown（优化语音播报）",
+          "custom_inputs": "自定义 Dify inputs（JSON）"
+        },
+        "data_description": {
+          "name": "留空将自动使用 Dify 应用名称。",
+          "base_url": "Dify API 基础地址，例如 https://api.dify.ai/v1",
+          "custom_inputs": "传递给 Dify inputs 的 JSON 对象。支持模板变量：$user_id、$user_name、$ha_user_uuid、$device_id、$device_name、$area_id、$area_name、$satellite_id、$language、$conversation_id、$query。"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "无法连接到 Dify，请检查 API 基础 URL、SSL 设置及网络。",
+      "invalid_auth": "Dify API Key 无效。",
+      "unsupported_app_mode": "不支持的 Dify 应用类型，仅支持聊天助手、Agent 和 Chatflow 应用（/v1/chat-messages）。",
+      "invalid_json": "自定义 inputs 的 JSON 语法不正确。",
+      "invalid_json_object": "自定义 inputs 必须是一个 JSON 对象（例如 {\"key\": \"value\"}）。",
+      "unknown": "发生未知错误。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Dify Conversation 选项",
+        "data": {
+          "base_url": "API 基础 URL",
+          "api_key": "API Key",
+          "verify_ssl": "验证 SSL 证书",
+          "timeout": "请求超时时间",
+          "response_mode": "响应模式",
+          "clean_response": "清理 <think> 标签与 Markdown（优化语音播报）",
+          "custom_inputs": "自定义 Dify inputs（JSON）"
+        },
+        "data_description": {
+          "base_url": "Dify API 基础地址，例如 https://api.dify.ai/v1",
+          "custom_inputs": "传递给 Dify inputs 的 JSON 对象。支持模板变量：$user_id、$user_name、$ha_user_uuid、$device_id、$device_name、$area_id、$area_name、$satellite_id、$language、$conversation_id、$query。"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "无法连接到 Dify，请检查 API 基础 URL、SSL 设置及网络。",
+      "invalid_auth": "Dify API Key 无效。",
+      "unsupported_app_mode": "不支持的 Dify 应用类型，仅支持聊天助手、Agent 和 Chatflow 应用（/v1/chat-messages）。",
+      "invalid_json": "自定义 inputs 的 JSON 语法不正确。",
+      "invalid_json_object": "自定义 inputs 必须是一个 JSON 对象（例如 {\"key\": \"value\"}）。",
+      "unknown": "发生未知错误。"
+    }
+  },
+  "selector": {
+    "response_mode": {
+      "options": {
+        "streaming": "流式输出（SSE，推荐）",
+        "blocking": "阻塞等待（Blocking）"
+      }
+    }
+  }
+}

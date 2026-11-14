@@ -1,0 +1,69 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Dify Conversation",
+        "description": "Connect a Dify Chat, Agent, or Chatflow application to Home Assistant Assist.",
+        "data": {
+          "name": "Name (optional)",
+          "base_url": "API Base URL",
+          "api_key": "API Key",
+          "verify_ssl": "Verify SSL certificate",
+          "timeout": "Request timeout",
+          "response_mode": "Response mode",
+          "clean_response": "Clean <think> tags and Markdown for speech",
+          "custom_inputs": "Custom Dify inputs (JSON)"
+        },
+        "data_description": {
+          "name": "Leave blank to use the Dify app name automatically.",
+          "base_url": "Dify API base URL, e.g. https://api.dify.ai/v1",
+          "custom_inputs": "JSON object passed to Dify 'inputs'. Supports $user_id, $user_name, $ha_user_uuid, $device_id, $device_name, $area_id, $area_name, $satellite_id, $language, $conversation_id, and $query."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Dify. Please check the API Base URL, SSL setting, and network.",
+      "invalid_auth": "Invalid Dify API key.",
+      "unsupported_app_mode": "Unsupported Dify app type. Only Chat, Agent, and Chatflow apps (/v1/chat-messages) are supported.",
+      "invalid_json": "Invalid JSON syntax in custom inputs.",
+      "invalid_json_object": "Custom inputs must be a JSON object (e.g. {\"key\": \"value\"}).",
+      "unknown": "Unexpected error occurred."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Dify Conversation Options",
+        "data": {
+          "base_url": "API Base URL",
+          "api_key": "API Key",
+          "verify_ssl": "Verify SSL certificate",
+          "timeout": "Request timeout",
+          "response_mode": "Response mode",
+          "clean_response": "Clean <think> tags and Markdown for speech",
+          "custom_inputs": "Custom Dify inputs (JSON)"
+        },
+        "data_description": {
+          "base_url": "Dify API base URL, e.g. https://api.dify.ai/v1",
+          "custom_inputs": "JSON object passed to Dify 'inputs'. Supports $user_id, $user_name, $ha_user_uuid, $device_id, $device_name, $area_id, $area_name, $satellite_id, $language, $conversation_id, and $query."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Dify. Please check the API Base URL, SSL setting, and network.",
+      "invalid_auth": "Invalid Dify API key.",
+      "unsupported_app_mode": "Unsupported Dify app type. Only Chat, Agent, and Chatflow apps (/v1/chat-messages) are supported.",
+      "invalid_json": "Invalid JSON syntax in custom inputs.",
+      "invalid_json_object": "Custom inputs must be a JSON object (e.g. {\"key\": \"value\"}).",
+      "unknown": "Unexpected error occurred."
+    }
+  },
+  "selector": {
+    "response_mode": {
+      "options": {
+        "streaming": "Streaming (SSE, recommended)",
+        "blocking": "Blocking"
+      }
+    }
+  }
+}

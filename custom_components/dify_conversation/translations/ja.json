@@ -1,0 +1,69 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dify Conversation の設定",
+        "description": "Dify のチャットボット、Agent、または Chatflow アプリを Home Assistant Assist に接続します。",
+        "data": {
+          "name": "名前（任意）",
+          "base_url": "API ベース URL",
+          "api_key": "API キー",
+          "verify_ssl": "SSL 証明書を検証する",
+          "timeout": "リクエストタイムアウト",
+          "response_mode": "応答モード",
+          "clean_response": "音声出力向けに <think> タグと Markdown を除去する",
+          "custom_inputs": "カスタム Dify inputs（JSON）"
+        },
+        "data_description": {
+          "name": "空欄の場合は Dify アプリ名が自動的に使用されます。",
+          "base_url": "Dify API のベース URL（例: https://api.dify.ai/v1）",
+          "custom_inputs": "Dify の inputs に渡す JSON オブジェクト。テンプレート変数: $user_id, $user_name, $ha_user_uuid, $device_id, $device_name, $area_id, $area_name, $satellite_id, $language, $conversation_id, $query"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Dify に接続できませんでした。API ベース URL、SSL 設定、ネットワークを確認してください。",
+      "invalid_auth": "Dify API キーが無効です。",
+      "unsupported_app_mode": "未対応の Dify アプリ種別です。チャット、Agent、Chatflow アプリ（/v1/chat-messages）のみ対応しています。",
+      "invalid_json": "カスタム inputs の JSON 構文が正しくありません。",
+      "invalid_json_object": "カスタム inputs は JSON オブジェクトである必要があります（例: {\"key\": \"value\"}）。",
+      "unknown": "予期しないエラーが発生しました。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Dify Conversation オプション",
+        "data": {
+          "base_url": "API ベース URL",
+          "api_key": "API キー",
+          "verify_ssl": "SSL 証明書を検証する",
+          "timeout": "リクエストタイムアウト",
+          "response_mode": "応答モード",
+          "clean_response": "音声出力向けに <think> タグと Markdown を除去する",
+          "custom_inputs": "カスタム Dify inputs（JSON）"
+        },
+        "data_description": {
+          "base_url": "Dify API のベース URL（例: https://api.dify.ai/v1）",
+          "custom_inputs": "Dify の inputs に渡す JSON オブジェクト。テンプレート変数: $user_id, $user_name, $ha_user_uuid, $device_id, $device_name, $area_id, $area_name, $satellite_id, $language, $conversation_id, $query"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Dify に接続できませんでした。API ベース URL、SSL 設定、ネットワークを確認してください。",
+      "invalid_auth": "Dify API キーが無効です。",
+      "unsupported_app_mode": "未対応の Dify アプリ種別です。チャット、Agent、Chatflow アプリ（/v1/chat-messages）のみ対応しています。",
+      "invalid_json": "カスタム inputs の JSON 構文が正しくありません。",
+      "invalid_json_object": "カスタム inputs は JSON オブジェクトである必要があります（例: {\"key\": \"value\"}）。",
+      "unknown": "予期しないエラーが発生しました。"
+    }
+  },
+  "selector": {
+    "response_mode": {
+      "options": {
+        "streaming": "ストリーミング（SSE・推奨）",
+        "blocking": "ブロッキング（Blocking）"
+      }
+    }
+  }
+}
